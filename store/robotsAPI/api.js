@@ -1,50 +1,72 @@
-import axios from "axios"
+import axios from "axios";
 const robotsAPI = axios.create({
   baseURL: "https://robots-46240.botics.co",
-  headers: { Accept: "application/json", "Content-Type": "application/json" }
-})
+  headers: {
+    Accept: "application/json",
+    "Content-Type": "application/json"
+  }
+});
+
 function api_docs_schema_retrieve(payload) {
-  return robotsAPI.get(`/api-docs/schema/`, { params: { lang: payload.lang } })
+  return robotsAPI.get(`/api-docs/schema/`, {
+    params: {
+      lang: payload.lang
+    }
+  });
 }
+
 function api_v1_login_create(payload) {
-  return robotsAPI.post(`/api/v1/login/`, payload)
+  return robotsAPI.post(`/api/v1/login/`, payload);
 }
+
 function api_v1_signup_create(payload) {
-  return robotsAPI.post(`/api/v1/signup/`, payload)
+  return robotsAPI.post(`/api/v1/signup/`, payload);
 }
+
 function rest_auth_login_create(payload) {
-  return robotsAPI.post(`/rest-auth/login/`, payload)
+  return robotsAPI.post(`/rest-auth/login/`, payload);
 }
+
 function rest_auth_logout_create(payload) {
-  return robotsAPI.post(`/rest-auth/logout/`)
+  return robotsAPI.post(`/rest-auth/logout/`);
 }
+
 function rest_auth_password_change_create(payload) {
-  return robotsAPI.post(`/rest-auth/password/change/`, payload)
+  return robotsAPI.post(`/rest-auth/password/change/`, payload);
 }
+
 function rest_auth_password_reset_create(payload) {
-  return robotsAPI.post(`/rest-auth/password/reset/`, payload)
+  return robotsAPI.post(`/rest-auth/password/reset/`, payload);
 }
+
 function rest_auth_password_reset_confirm_create(payload) {
-  return robotsAPI.post(`/rest-auth/password/reset/confirm/`, payload)
+  return robotsAPI.post(`/rest-auth/password/reset/confirm/`, payload);
 }
+
 function rest_auth_registration_create(payload) {
-  return robotsAPI.post(`/rest-auth/registration/`, payload)
+  return robotsAPI.post(`/rest-auth/registration/`, payload);
 }
+
 function rest_auth_registration_resend_email_create(payload) {
-  return robotsAPI.post(`/rest-auth/registration/resend-email/`, payload)
+  return robotsAPI.post(`/rest-auth/registration/resend-email/`, payload);
 }
+
 function rest_auth_registration_verify_email_create(payload) {
-  return robotsAPI.post(`/rest-auth/registration/verify-email/`, payload)
+  return robotsAPI.post(`/rest-auth/registration/verify-email/`, payload);
 }
+
 function rest_auth_user_retrieve(payload) {
-  return robotsAPI.get(`/rest-auth/user/`)
+  return robotsAPI.get(`/rest-auth/user/`);
 }
+
 function rest_auth_user_update(payload) {
-  return robotsAPI.put(`/rest-auth/user/`, payload)
+  return robotsAPI.put(`/rest-auth/user/`, payload);
 }
+
 function rest_auth_user_partial_update(payload) {
-  return robotsAPI.patch(`/rest-auth/user/`, payload)
+  return robotsAPI.patch(`/rest-auth/user/`, payload);
 }
+
 export const apiService = {
   api_docs_schema_retrieve,
   api_v1_login_create,
@@ -60,4 +82,4 @@ export const apiService = {
   rest_auth_user_retrieve,
   rest_auth_user_update,
   rest_auth_user_partial_update
-}
+};
