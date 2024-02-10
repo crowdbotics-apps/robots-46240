@@ -43,7 +43,7 @@ const WelcomeScreen = ({
         <TouchableOpacity onPress={toggle}>
           <Text style={styles.timer}>{seconds}s</Text>
         </TouchableOpacity>
-        <Button title="Go to Next Screen" onPress={() => navigation.navigate('NextScreen')} />
+        <Button title="Go to Next Screen" onPress={() => navigation.navigate('NextScreen')} style={styles.WJBJVriZ} />
         <Text style={styles.footer}>Made with ❤️ by Crowdbotics</Text>
       </ScrollView>
     </SafeAreaView>;
@@ -88,6 +88,11 @@ const styles = StyleSheet.create({
     color: "#828AB0",
     fontWeight: "700",
     marginBottom: 20
+  },
+  WJBJVriZ: {
+    position: "absolute",
+    top: 634,
+    left: 177
   }
 });
 export default WelcomeScreen;
