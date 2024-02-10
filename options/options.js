@@ -1,10 +1,11 @@
 export const globalOptions = {
-  name: "robots-46240",
-  url: "https://robots-46240.botics.co",
-  api: "https://robots-46240.botics.co/api/v1",
-  screenOptions: {
-    headerShown: false
-  }
+  "name": "robots-46240",
+  "url": "https://robots-46240.botics.co",
+  "api": "https://robots-46240.botics.co/api/v1",
+  "screenOptions": {
+    "headerShown": false
+  },
+  "initialRoute": "modules"
 };
 export const modulesOptions = {
   "@modules/app-menu": {
